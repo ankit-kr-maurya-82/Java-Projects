@@ -19,6 +19,10 @@ public class Cafe{
                     public void foodItem(){
                         System.out.println("Drinks [1]");
                         System.out.println("Snacks [2]");
+                        
+                        System.out.print("enter your choice: ");
+                        int selectUser = sc.nextInt();
+                        System.out.println("your choice: "+selectUser);
                     }
                 }
                 foodItemContainer foodObject = new foodItemContainer();
