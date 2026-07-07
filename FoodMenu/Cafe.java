@@ -22,7 +22,14 @@ public class Cafe{
                         
                         System.out.print("enter your choice: ");
                         int selectUser = sc.nextInt();
-                        System.out.println("your choice: "+selectUser);
+
+                        if(selectUser == 1){
+                            System.out.println("you selected Drinks");
+                        }else if(selectUser == 2){
+                            System.out.println("you selected Snacks");
+                        }else{
+                            System.out.println("Invalid choice, please enter 1");
+                        }
                     }
                 }
                 foodItemContainer foodObject = new foodItemContainer();
@@ -34,6 +41,11 @@ public class Cafe{
                     public void foodItemTwo(){
                         System.out.println("Chinise Dish [1]");
                         System.out.println("South Dish [2]");
+
+                        System.out.print("enter your choice: ");
+                        int selectUser = sc.nextInt();
+                        System.out.println("your choice: "+selectUser);
+                        
                     }
                 }
                 foodItemContainerTwo foodObjectTwo = new foodItemContainerTwo();
@@ -45,6 +57,11 @@ public class Cafe{
                     public void foodItemThree(){
                         System.out.println("Special Thali [1]");
                         System.out.println("Normal Thali [2]");
+
+                        System.out.print("enter your choice: ");
+                        int selectUser = sc.nextInt();
+                        System.out.println("your choice: "+selectUser);
+                        
                     }
                 }
                 foodItemContainerThree foodObjectThree = new foodItemContainerThree();
