@@ -29,7 +29,7 @@ public class UnitConverter{
     public static void DisplayLength(){
         line(30);
         linebreak();
-        String[] display= {"Millimeter", "Centimeter"};
+        String[] display= {"Millimeter", "Centimeter", "Meter"};
         for(int i=0; i<display.length;i++){
             System.out.println(i+1+". "+display[i]);
         }
@@ -46,6 +46,16 @@ public class UnitConverter{
     public static void CentiToMilli(float cm) {
         float mm=cm*10;
         System.out.println(cm+" cm : "+mm+" mm");
+    }
+    // mm convert to m
+    public static void MilliToMeter(float mm) {
+        float m=mm/1000;
+        System.out.println(mm+" mm : "+m+" m");
+    }
+    // m convert to mm
+    public static void MeterToMilli(float m) {
+        float mm=m*1000;
+        System.out.println(m+" m : "+mm+" mm");
     }
     // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
@@ -74,7 +84,18 @@ public class UnitConverter{
             System.out.print("Enter your number (cm): ");
             float cm = sc.nextFloat();
             CentiToMilli(cm);
+        }else if(from == 1 && to == 3){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (mm): ");
+            float mm = sc.nextFloat();
+            MilliToMeter(mm);
+        }else if(from == 3 && to == 1){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (m): ");
+            float m = sc.nextFloat();
+            MeterToMilli(m);
         }
+
 
     }
 
