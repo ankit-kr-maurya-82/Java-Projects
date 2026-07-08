@@ -23,13 +23,40 @@ public class UnitConverter{
         line(30);
     }
 
-    // Length function
+    // ================================Length function========================
+
+    // display length converter
+    public static void DisplayLength(){
+        line(30);
+        linebreak();
+        String[] display= {"Millimeter", "Centimeter"};
+        for(int i=0; i<display.length;i++){
+            System.out.println(i+1+". "+display[i]);
+        }
+        line(30);
+    }
+
+
+    // mm convert to cm
+    public static void MilliToCenti(float mm) {
+        float cm=mm/10;
+        System.out.println(mm+":"+cm);
+    }
+    // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
         linebreak();
         line(30);
         linebreak();
         System.out.println("Length Converter");
+        DisplayLength();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your choice convert from: ");
+        int options = sc.nextInt();
+
     }
+
+
+
     // Weight function
     public static void WeightConverter() {
         linebreak();
@@ -49,7 +76,7 @@ public class UnitConverter{
         Display();
         linebreak();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Input a value to convert.");
+        System.out.print("Input a value to convert: ");
         int options = sc.nextInt();
         if(options == 1){
             LengthConverter();
