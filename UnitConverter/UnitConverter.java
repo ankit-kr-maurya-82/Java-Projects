@@ -42,6 +42,11 @@ public class UnitConverter{
         float cm=mm/10;
         System.out.println(mm+" mm : "+cm+" cm");
     }
+    // cm convert to mm
+    public static void CentiToMilli(float cm) {
+        float mm=cm*10;
+        System.out.println(cm+" cm : "+mm+" mm");
+    }
     // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
         linebreak();
@@ -64,6 +69,11 @@ public class UnitConverter{
             float mm = sc.nextFloat();
             MilliToCenti(mm);
 
+        }else if(from == 2 && to == 1){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (cm): ");
+            float cm = sc.nextFloat();
+            CentiToMilli(cm);
         }
 
     }
