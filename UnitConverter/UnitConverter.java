@@ -40,7 +40,7 @@ public class UnitConverter{
     // mm convert to cm
     public static void MilliToCenti(float mm) {
         float cm=mm/10;
-        System.out.println(mm+":"+cm);
+        System.out.println(mm+" mm : "+cm+" cm");
     }
     // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
@@ -49,9 +49,22 @@ public class UnitConverter{
         linebreak();
         System.out.println("Length Converter");
         DisplayLength();
-        Scanner sc = new Scanner(System.in);
+        linebreak();
+        Scanner scfrom = new Scanner(System.in);
         System.out.print("Enter your choice convert from: ");
-        int options = sc.nextInt();
+        int from = scfrom.nextInt();
+
+        Scanner scto = new Scanner(System.in);
+        System.out.print("Enter your choice convert to: ");
+        int to = scto.nextInt();
+
+        if(from == 1 && to == 2){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (mm): ");
+            float mm = sc.nextFloat();
+            MilliToCenti(mm);
+
+        }
 
     }
 
