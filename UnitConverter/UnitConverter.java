@@ -29,7 +29,7 @@ public class UnitConverter{
     public static void DisplayLength(){
         line(30);
         linebreak();
-        String[] display= {"Millimeter", "Centimeter", "Meter"};
+        String[] display= {"Millimeter", "Centimeter", "Meter", "Kilometer"};
         for(int i=0; i<display.length;i++){
             System.out.println(i+1+". "+display[i]);
         }
