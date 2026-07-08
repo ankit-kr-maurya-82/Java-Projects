@@ -37,25 +37,35 @@ public class UnitConverter{
     }
 
 
-    // mm convert to cm
+    // 1. mm convert to cm
     public static void MilliToCenti(float mm) {
         float cm=mm/10;
         System.out.println(mm+" mm : "+cm+" cm");
     }
-    // cm convert to mm
+    // 2. cm convert to mm
     public static void CentiToMilli(float cm) {
         float mm=cm*10;
         System.out.println(cm+" cm : "+mm+" mm");
     }
-    // mm convert to m
+    // 3. mm convert to m
     public static void MilliToMeter(float mm) {
         float m=mm/1000;
         System.out.println(mm+" mm : "+m+" m");
     }
-    // m convert to mm
+    // 4. m convert to mm
     public static void MeterToMilli(float m) {
         float mm=m*1000;
         System.out.println(m+" m : "+mm+" mm");
+    }
+    // 5. m convert to cm
+    public static void MeterToCenti(float m) {
+        float cm=m*100;
+        System.out.println(m+" m : "+cm+" cm");
+    }
+    // 6. cm convert to m
+    public static void CentiToMeter(float cm) {
+        float m=cm/100;
+        System.out.println(cm+" cm : "+m+" m");
     }
     // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
@@ -94,7 +104,19 @@ public class UnitConverter{
             System.out.print("Enter your number (m): ");
             float m = sc.nextFloat();
             MeterToMilli(m);
+        }else if(from == 3 && to == 2){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (m): ");
+            float m = sc.nextFloat();
+            MeterToCenti(m);
+        }else if(from == 2 && to == 3){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (cm): ");
+            float cm = sc.nextFloat();
+            CentiToMeter(cm);
         }
+
+
 
 
     }
