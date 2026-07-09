@@ -78,6 +78,11 @@ public class UnitConverter{
         float km=m/1000;
         System.out.println(m+" m : "+km+" km");
     }
+    // 9. km convert to cm
+    public static void KilloToCenti(float km) {
+        float cm=km*100000;
+        System.out.println(km+" km : "+cm+" cm");
+    }
     // --------------------------Main Length function-----------------------------------------------
     public static void LengthConverter() {
         linebreak();
@@ -135,6 +140,11 @@ public class UnitConverter{
             System.out.print("Enter your number (m): ");
             float meter = sc.nextFloat();
             MeterToKillo(meter);
+        }else if(from == 4 && to == 2){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your number (km): ");
+            float km = sc.nextFloat();
+            KilloToCenti(km);
         }
 
 
