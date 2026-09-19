@@ -60,6 +60,7 @@ class Ecommerce {
     }
 
     public static void deleteProduct(int id) {
+        
         Connection con = connect();
         if (con == null) return;
         try {
