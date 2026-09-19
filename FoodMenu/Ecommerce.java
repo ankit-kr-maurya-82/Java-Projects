@@ -2,9 +2,9 @@ import java.sql.*;
 
 class Ecommerce {
 
-    static String url = "jdbc:mysql://localhost:3306/ecommerce";
-    static String user = "ankit";
-    static String password = "ankit123";
+    static String url = properties.getProperty("url");
+    static String user = properties.getProperty("user");
+    static String password = properties.getProperty("password");
 
     public static Connection connect() {
         try {
